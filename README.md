@@ -1,16 +1,57 @@
-# React + Vite
+# 🌹 RoseTravel
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A premium, modern travel agency landing page built with **React**, **Vite**, **Tailwind CSS**, and **DaisyUI**.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Gorgeous UI/UX**: Premium glassmorphism effects, smooth animations, and a cohesive design system.
+- **Dynamic Layout**: A stunning hero section with interactive filter bars and floating tour cards.
+- **Fully Responsive**: Carefully crafted to look perfect on mobile, tablet, and desktop devices.
+- **Modern Tech Stack**: Uses the blazing fast Vite bundler, latest React features, and Tailwind CSS.
+- **Iconography**: Beautifully integrated with `react-icons` (FontAwesome 6) for a professional look.
 
-## React Compiler
+## 🛠️ Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Framework**: React 19
+- **Bundler**: Vite
+- **Routing**: React Router DOM
+- **Styling**: Tailwind CSS v4 + DaisyUI
+- **Icons**: React Icons (FontAwesome)
 
-## Expanding the Oxlint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+To run this project locally, follow these steps:
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/emon-shikder/rose-travel.git
+   cd rose-travel
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **View the app**
+   Open your browser and navigate to `http://localhost:5173/` to see the site in action.
+
+## 📂 Project Structure
+
+- `src/components/`: Reusable UI components (Navbar, Footer, Hero, Services, etc.)
+- `src/pages/`: Page-level components (Home, Tours, About, Contact)
+- `src/assets/`: Static assets like images and global CSS
+
+## 📝 License
+
+This project is created for demonstration purposes and is licensed under the MIT License.
