@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-primaryRed: #c9184a;
+  --color-primaryDark: #800f2f;
+  --color-accentGold: #ffd166;
+  --font-sans: "Inter", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+  
+  --animate-fade-in-up: fadeInUp 1s ease-out forwards;
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@layer utilities {
+  .glass-effect {
+    @apply bg-white/30 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+}
