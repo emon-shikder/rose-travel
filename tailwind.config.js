@@ -14,6 +14,7 @@ export default {
         primaryRed: '#c9184a',
         primaryDark: '#800f2f',
         accentGold: '#ffd166',
+        accentLime: '#d4ed79',
       },
       keyframes: {
         fadeInUp: {

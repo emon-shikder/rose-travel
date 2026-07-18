@@ -1,24 +1,28 @@
 import React from 'react';
+import { FaRegClock } from 'react-icons/fa6';
+import dest1 from '../../assets/images/Rectangle 5.png';
+import dest2 from '../../assets/images/Rectangle 6.png';
+import dest3 from '../../assets/images/Rectangle 7.png';
 
 const destinationsData = [
   {
     id: 1,
     title: 'Santorini, Greece',
-    image: 'https://images.unsplash.com/photo-1570077191197-28d844c885cd?q=80&w=2938&auto=format&fit=crop',
+    image: dest1,
     price: '$1,200',
     duration: '7 Days',
   },
   {
     id: 2,
     title: 'Bali, Indonesia',
-    image: 'https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=2838&auto=format&fit=crop',
+    image: dest2,
     price: '$850',
     duration: '5 Days',
   },
   {
     id: 3,
     title: 'Swiss Alps, Switzerland',
-    image: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?q=80&w=2940&auto=format&fit=crop',
+    image: dest3,
     price: '$1,500',
     duration: '6 Days',
   },
@@ -26,7 +30,7 @@ const destinationsData = [
 
 const Destinations = () => {
   return (
-    <section id="destinations" className="py-20 bg-base-100">
+    <section id="destinations" className="py-10 bg-base-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold font-heading text-primaryDark mb-4">Top Destinations</h2>
@@ -53,9 +57,7 @@ const Destinations = () => {
                 
                 <div className="flex justify-between items-center mt-6 pt-6 border-t border-base-200">
                   <div className="flex items-center gap-2 text-base-content/70 font-medium">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <FaRegClock className="h-5 w-5" />
                     {dest.duration}
                   </div>
                   <button className="btn btn-ghost text-primaryRed hover:text-primaryDark hover:bg-red-50 px-6 font-bold">
