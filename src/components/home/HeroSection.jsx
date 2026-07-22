@@ -82,29 +82,29 @@ const HeroSection = () => {
       </div>
 
       {/* Overlapping Cards Container */}
-      <div className="absolute -bottom-24 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-6 justify-center z-20">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-6 justify-center z-20 relative mt-16 md:mt-0 md:absolute md:-bottom-24 pb-12 md:pb-0">
         
         {/* Card 1 */}
-        <div className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl flex items-center hover:-translate-y-2 transition-transform duration-500 cursor-pointer h-48">
-          <div className="w-2/5 h-full relative">
-            <img src={card1} alt="Yogyakarta" className="w-full h-full object-cover" />
+        <div className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl flex items-center hover:-translate-y-2 transition-transform duration-500 cursor-pointer h-auto md:h-48">
+          <div className="w-1/3 md:w-2/5 h-full relative min-h-[120px]">
+            <img src={card1} alt="Yogyakarta" className="absolute inset-0 w-full h-full object-cover" />
           </div>
-          <div className="w-3/5 p-6 text-white text-left">
-            <h3 className="text-xl font-bold font-heading mb-2 leading-tight">3D2N Yogyakarta Historical Tour</h3>
+          <div className="w-2/3 md:w-3/5 p-4 md:p-6 text-white text-left">
+            <h3 className="text-lg md:text-xl font-bold font-heading mb-1 md:mb-2 leading-tight">3D2N Yogyakarta Historical Tour</h3>
             <p className="text-xs text-white/70 mb-1">For reservation, contact us now.</p>
-            <p className="text-xs text-white/70">Special discount for this month.</p>
+            <p className="text-xs text-white/70 hidden sm:block">Special discount for this month.</p>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl flex items-center hover:-translate-y-2 transition-transform duration-500 cursor-pointer h-48">
-          <div className="w-2/5 h-full relative">
-            <img src={card2} alt="Nusa Penida" className="w-full h-full object-cover" />
+        <div className="flex-1 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl overflow-hidden shadow-2xl flex items-center hover:-translate-y-2 transition-transform duration-500 cursor-pointer h-auto md:h-48">
+          <div className="w-1/3 md:w-2/5 h-full relative min-h-[120px]">
+            <img src={card2} alt="Nusa Penida" className="absolute inset-0 w-full h-full object-cover" />
           </div>
-          <div className="w-3/5 p-6 text-white text-left">
-            <h3 className="text-xl font-bold font-heading mb-2 leading-tight">Nusa Penida 4 Days 3 Night Trip</h3>
+          <div className="w-2/3 md:w-3/5 p-4 md:p-6 text-white text-left">
+            <h3 className="text-lg md:text-xl font-bold font-heading mb-1 md:mb-2 leading-tight">Nusa Penida 4 Days 3 Night Trip</h3>
             <p className="text-xs text-white/70 mb-1">For reservation, contact us now.</p>
-            <p className="text-xs text-white/70">Special discount for this month.</p>
+            <p className="text-xs text-white/70 hidden sm:block">Special discount for this month.</p>
           </div>
         </div>
 

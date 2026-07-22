@@ -4,6 +4,7 @@ import { FaMagnifyingGlass, FaBars } from 'react-icons/fa6';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -19,17 +20,17 @@ const Navbar = () => {
 
   return (
     <div className={`navbar fixed top-0 w-full z-50 transition-all duration-500 ${!isTransparent ? 'bg-base-100/90 backdrop-blur-lg shadow-sm py-2 text-base-content border-b border-base-200/50' : 'bg-transparent py-6 text-white'}`}>
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex justify-between items-center relative">
         
         {/* Left: Brand */}
         <div className="flex justify-start shrink-0">
-          <Link to="/" className="btn btn-ghost text-2xl font-heading font-extrabold px-0 hover:bg-transparent">
+          <Link to="/" className={`btn btn-ghost text-2xl font-heading font-extrabold px-0 hover:bg-transparent focus:outline-none focus:ring-0 outline-none border-none ${isTransparent ? 'text-white' : 'text-base-content'}`}>
             Rose<span className="text-primaryRed">Travel</span>
           </Link>
         </div>
         
         {/* Center: Navigation Pill */}
-        <div className="hidden lg:flex justify-center flex-1">
+        <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2">
           <ul className={`menu menu-horizontal px-1 gap-1 font-medium rounded-full transition-all duration-300 flex-nowrap ${isTransparent ? 'bg-white/20 backdrop-blur-md border border-white/10 shadow-sm' : 'bg-base-200/50'}`}>
             <li><Link to="/" className="hover:text-accentLime transition-colors px-4 py-2 rounded-full whitespace-nowrap">Home</Link></li>
             <li><Link to="/tours" className="hover:text-accentLime transition-colors px-4 py-2 rounded-full whitespace-nowrap">Destinations</Link></li>
@@ -40,9 +41,24 @@ const Navbar = () => {
         
         {/* Right: Actions */}
         <div className="flex justify-end items-center gap-4 shrink-0">
-          <button className={`btn btn-circle btn-sm md:btn-md border-none ${isTransparent ? 'bg-white/20 backdrop-blur-md text-white hover:bg-white/30' : 'bg-base-200 text-base-content hover:bg-base-300'}`}>
-            <FaMagnifyingGlass className="h-4 w-4" />
-          </button>
+          <div className="relative flex items-center">
+            <input 
+              type="text" 
+              placeholder={searchOpen ? "Search..." : ""}
+              onFocus={() => setSearchOpen(true)}
+              onBlur={(e) => { if (!e.target.value) setSearchOpen(false); }}
+              className={`input input-sm md:input-md rounded-full transition-all duration-300 outline-none border-none ${
+                searchOpen 
+                  ? `w-40 md:w-64 pl-10 pr-4 ${isTransparent ? 'bg-white/20 backdrop-blur-md text-white placeholder:text-white/70 focus:bg-white/30' : 'bg-base-200 text-base-content focus:bg-base-300'}`
+                  : `w-8 md:w-12 p-0 cursor-pointer text-transparent shadow-none ${isTransparent ? 'bg-transparent md:bg-white/20 md:backdrop-blur-md hover:bg-white/30 text-white' : 'bg-transparent md:bg-base-200 hover:bg-base-300 text-base-content'}`
+              }`}
+            />
+            <div 
+              className={`absolute top-1/2 -translate-y-1/2 pointer-events-none transition-all duration-300 ${searchOpen ? 'left-3.5' : 'left-1/2 -translate-x-1/2'}`}
+            >
+              <FaMagnifyingGlass className={`h-4 w-4 ${isTransparent ? (searchOpen ? 'text-white/70' : 'text-white') : (searchOpen ? 'text-base-content/70' : 'text-base-content')}`} />
+            </div>
+          </div>
           
           <Link to="/tours" className="btn bg-accentLime text-primaryDark hover:bg-[#c5df60] border-none rounded-full px-8 shadow-sm hover:shadow-md transition-all duration-300 font-bold hidden sm:inline-flex">
             Book Now

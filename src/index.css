@@ -2,17 +2,29 @@
 @plugin "daisyui";
 
 @theme {
-  --color-primaryRed: #c9184a;
+  --color-primaryRed: #e11d48;
   --color-primaryDark: #800f2f;
   --color-accentGold: #ffd166;
   --font-sans: "Inter", sans-serif;
   --font-heading: "Outfit", sans-serif;
   
   --animate-fade-in-up: fadeInUp 1s ease-out forwards;
+  --animate-scroll-left: scrollLeft 40s linear infinite;
+  --animate-scroll-right: scrollRight 40s linear infinite;
   
   @keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes scrollLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes scrollRight {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
   }
 }
 
